@@ -21,7 +21,7 @@ or, run it from within python as:
 There are three simple arguments:
 - The program ID or PID.  Each JWST program has a PID.  For TEMPLATES it's 01355.
 - The science instrument for which you want data.  Lower-case, choices are nircam, miri, niriss, nirspec.
-- The [kind of data](https://jwst-pipeline.readthedocs.io/en/latest/jwst/data_products/product_types.html) you want.  While there are many ways to search, our experience is that 90% of the time, we just want all of one type of data product ("get me all the raw data").   
+- The [kind of data](https://jwst-pipeline.readthedocs.io/en/latest/jwst/data_products/product_types.html) you want.  Our experience is that 90% of the time, we just want all of one type of data product ("get me all the raw data").   
 
 Common kinds of files are:
 - UNCAL (Level 1b uncalibrated or "raw" data)

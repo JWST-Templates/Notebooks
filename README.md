@@ -7,7 +7,9 @@ Step 0) You probably should install the JWST pipeline.  Our simple notebook [0_i
 
 Step 1) Get some sweet sweet JWST data.  You can do this from the MAST portal, but many find it hard to use, so we recommend a simple command-line script [JWST_API_Fetch_inBulk_templates.py](https://github.com/JWST-Templates/Notebooks/blob/main/JWST_API_Fetch_inBulk_templates.py)  Run it from the command line as:
 >python JWST_API_Fetch_inBulk_templates.py 01355 nircam RATE
-or, run it from within python as:
+
+or, run it from within python as: 
+
 >run JWST_API_Fetch_inBulk_templates.py 01355 nircam UNCAL
 
 Common kinds of files are:

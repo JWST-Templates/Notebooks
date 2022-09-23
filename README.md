@@ -7,7 +7,7 @@ We break down getting started with JWST data into simple steps.  We'll use the E
 Our simple notebook [0_install_pipeline.ipynb](https://github.com/JWST-Templates/Notebooks/blob/main/0_install_pipeline.ipynb) shows you how.
 
 ## Step 1) Get some sweet sweet JWST data.  
-There are several ways to do this.  The most obvious is the [MAST web portal](https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html), which has a lot of options, but can be overwhelming and clunky.  There's also an API, but man is the learning curve steep. 
+There are several ways to query and download JWST data.  The most obvious is the [MAST web portal](https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html), which has a lot of options, but can be overwhelming and clunky.  There's also an API, but man is the learning curve steep. 
 
 Instead, TEMPLATES recommends that you grab JWST data using this simple command-line script [JWST_API_Fetch_inBulk_templates.py](https://github.com/JWST-Templates/Notebooks/blob/main/JWST_API_Fetch_inBulk_templates.py).  It makes an easy thing easy.
 

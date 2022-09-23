@@ -29,7 +29,7 @@ Common kinds of files are:
 - CAL (Level 2b calibrated imaging data in units of MJy/sr)
 - I2D (same as CAL, but resampled)
 
-A nice feature of this script is that it won't time out, even when you query very large datasets.  The script finds all the products matching your query, and generates a little bash script that you then run to get the products. 
+A nice feature of this script is that it won't time out, even when you query very large datasets.  The script finds all the products matching your query, and generates a little bash script that you then run to get the products. We added an optional --token, -t keyword to enter your MAST token, to access secret data.
 
 Here's the script in action (wht a % to mark what to type on the command line).  We said it was easy:
 ```

@@ -1,13 +1,13 @@
 # Notebooks
 Notebooks released by the JWST ERS TEMPLATES team, to download, reduce, and analyze JWST data.
 
-Let's break down how to get started on JWST data into simple steps.  We'll use the ERS TEMPLATES program as an example, because hey, that's our program (program ID 01355).  Feel free to grab these tools and use them for your own purposes.   
+We break down getting started with JWST data into simple steps.  We'll use the ERS TEMPLATES program as an example, because hey, that's our program (program ID 01355).  Feel free to grab these tools and use them for your own purposes.   
 
 ## Step 0) You probably should install the JWST pipeline.  
 Our simple notebook [0_install_pipeline.ipynb](https://github.com/JWST-Templates/Notebooks/blob/main/0_install_pipeline.ipynb) shows you how.
 
 ## Step 1) Get some sweet sweet JWST data.  
-You can do this from the MAST portal, but many find it hard to use.  TEMPLATES recommends a simple command-line script [JWST_API_Fetch_inBulk_templates.py](https://github.com/JWST-Templates/Notebooks/blob/main/JWST_API_Fetch_inBulk_templates.py)  
+You can do this from the MAST portal, but many find it hard to use.  There's an API, with a steep learning curve.  Instead, TEMPLATES recommends a simple command-line script [JWST_API_Fetch_inBulk_templates.py](https://github.com/JWST-Templates/Notebooks/blob/main/JWST_API_Fetch_inBulk_templates.py)  
 
 Run the script from the command line as:
 >python JWST_API_Fetch_inBulk_templates.py 01355 nircam RATE
@@ -26,6 +26,8 @@ Common kinds of files are:
 - RATE (Level 2a imaging data in units of DN/s)
 - CAL (Level 2b calibrated imaging data in units of MJy/sr)
 - I2D (same as CAL, but resampled)
+
+A nice feature of this script is that it won't time out, even when you are querying very large datasets.
 
 ## Step 2) (Coming soon) Run the pipeline on the raw data to apply the latest reference files.
 

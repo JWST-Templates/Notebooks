@@ -14,7 +14,7 @@ import argparse
 from astroquery.mast import Observations
 from astropy.table import unique, vstack, Table
 
-def fetch_files(PID, INSTRUMENT, KINDOFDATA='UNCAL', sz_chunk=8):
+def fetch_files(PID, INSTRUMENT, KINDOFDATA='UNCAL', token=False, sz_chunk=8):
     '''Perform a search for all matching observations in the specified JWST 
     program. Specifying the mission as 'JWST' will optimize the search.
     '''
@@ -45,7 +45,7 @@ def fetch_files(PID, INSTRUMENT, KINDOFDATA='UNCAL', sz_chunk=8):
         # the token as an argument to the login() method, or put it in the 
         # environment variable $MAST_API_TOKEN. OTOH, if all the matching products 
         # are public you may skip this step.
-        Observations.login()
+        if token : Observations.login(token)
 
         # Download a bash script which has cURL commands to fetch the products. 
         # Note the option to download only 'SCIENCE' files (excluding, e.g., 
@@ -76,8 +76,10 @@ if __name__ == '__main__':
                         help='science instrument name')
     parser.add_argument('kindofdata', type=str,
                         help='kind of data (examples: RATE, CAL, UNCAL, I2D)')
+    parser.add_argument('-t', '--token', type=str, default="",
+                        help='If data are not public, you should supply a MAST token.')
     parser.add_argument('-c', '--chunk_size', type=int, default=8,
                         choices=range(1,100), 
                         help='Number of Obs to process at a time')
     args = parser.parse_args()
-    fetch_files(args.progID, args.instrument, args.kindofdata, args.chunk_size)
+    fetch_files(args.progID, args.instrument, args.kindofdata, args.token, args.chunk_size)

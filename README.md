@@ -29,7 +29,7 @@ Common kinds of files are:
 - CAL (Level 2b calibrated imaging data in units of MJy/sr)
 - I2D (same as CAL, but resampled)
 
-A nice feature of this script is that it won't time out, even when you are querying very large datasets.
+A nice feature of this script is that it won't time out, even when you query very large datasets.  Dick Shaw at STScI showed us how to do it this way, and we are grateful.
 
 ## Step 2) (Coming soon) Run the pipeline on the raw data to apply the latest reference files.
 

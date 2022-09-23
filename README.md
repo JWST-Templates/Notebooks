@@ -31,20 +31,24 @@ Common kinds of files are:
 
 A nice feature of this script is that it won't time out, even when you query very large datasets.  The script finds all the products matching your query, and generates a little bash script that you then run to get the products. 
 
-Here's the script in action.  We said it was easy:
->python JWST_API_Fetch_inBulk_templates.py 01355 nircam UNCAL
->Querying for program 01355
->Querying for science instrument nircam
->  Found 16 matching Observations...
->  Fetching product list, 8 Observations at a time.
->  Number of unique files: 1755
->INFO: MAST API token accepted, welcome Jane Rigby [astroquery.mast.auth]
->Downloading URL https://mast.stsci.edu/api/v0.1/Download/bundle.sh to ./mastDownload_20220923105400.sh ... [Done]
->(jwst_pipe) [gs66-kameny:~/Python/JWST_commis] % chmod u+x mastDownload_20220923105400.sh 
->(jwst_pipe) [gs66-kameny:~/Python/JWST_commis] % ./mastDownload_20220923105400.sh 
-><<< Downloading File: mast:JWST/product/jw01355024001_07101_00002_nrcb1_uncal.fits
->                  To: MAST_2022-09-23T1054/JWST/jw01355024001_07101_00002_nrcb1>/jw01355024001_07101_00002_nrcb1_uncal.fits
->############     
+Here's the script in action (wht a % to mark what to type ont he command line).  We said it was easy:
+```
+% python JWST_API_Fetch_inBulk_templates.py 01355 nircam UNCAL
+Querying for program 01355
+Querying for science instrument nircam
+  Found 16 matching Observations...
+  Fetching product list, 8 Observations at a time.
+  Number of unique files: 1755
+INFO: MAST API token accepted, welcome Jane Rigby [astroquery.mast.auth]
+Downloading URL https://mast.stsci.edu/api/v0.1/Download/bundle.sh to ./mastDownload_20220923105400.sh ... [Done]
+% chmod u+x mastDownload_20220923105400.sh 
+% ./mastDownload_20220923105400.sh 
+<<< Downloading File: mast:JWST/product/jw01355024001_07101_00002_nrcb1_uncal.fits
+                  To: MAST_2022-09-23T1054/JWST/jw01355024001_07101_00002_nrcb1/jw01355024001_07101_00002_nrcb1_uncal.fits
+############      (and so on.... all the files will download with a little status bar)
+```
+
+
 
 
 ## Step 2) (Coming soon) Run the pipeline on the raw data to apply the latest reference files.

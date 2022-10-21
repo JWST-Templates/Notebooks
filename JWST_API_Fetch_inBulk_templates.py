@@ -7,7 +7,7 @@
 # Call this script from within ipython as:   run JWST_API_Fetch_inBulk_templates.py 01355 nircam UNCAL
 # or call it from the command line as:       python JWST_API_Fetch_inBulk_templates.py 01355 nircam RATE
 
-
+# You will need to install astroquery:  pip install --pre astroquery
 
 # The results are returned in an astropy Table, so import some table methods
 import argparse

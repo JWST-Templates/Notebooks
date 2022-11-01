@@ -50,5 +50,12 @@ Downloading URL https://mast.stsci.edu/api/v0.1/Download/bundle.sh to ./mastDown
 
 
 
-## Step 2) (Coming soon) Run the pipeline on the raw data to apply the latest reference files.
+## Step 2) Run the pipeline on the raw data to apply the latest reference files.
 
+### &mdash; NIRSpec IFU
+
+Included in this repository is an example Jupter notebook for reducing the NIRSpec IFU data from TEMPLATES.  At first glance, this notebook may seem like a lot of steps, but we've set it up so that it 1) works great for TEMPLATES data, and 2) does a better job than the basic reduction would (e.g., better cosmic ray flagging, background subtraction, etc.).
+
+After you've downloaded the data and placed it all where you want it, open up this notebook and start walking through the cells! However, just as a note -- the first time you run this notebook it will download all of the reference files that we mention in the [installation notebook](https://github.com/JWST-Templates/Notebooks/blob/main/0_install_pipeline.ipynb).  This will be GB's of files, so be prepared to wait for a while that first time!
+
+### (other instruments+observing modes used in TEMPLATES coming soon!)

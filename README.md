@@ -12,12 +12,14 @@ There are several ways to query and download JWST data.  The most obvious is the
 Instead, TEMPLATES recommends that you grab JWST data using this simple command-line script [JWST_API_Fetch_inBulk_templates.py](https://github.com/JWST-Templates/Notebooks/blob/main/JWST_API_Fetch_inBulk_templates.py).  It makes an easy thing easy.
 
 Run the script from the command line as:
+
 >python JWST_API_Fetch_inBulk_templates.py 01355 nircam RATE
 
 or, run it from within python as: 
 
 >run JWST_API_Fetch_inBulk_templates.py 01355 nirspec UNCAL
 
+  
 There are three simple arguments:
 - The program ID or PID.  Each JWST program has a PID.  For TEMPLATES it's 01355.
 - The science instrument for which you want data.  Lower-case, choices are nircam, miri, niriss, nirspec.
@@ -52,10 +54,17 @@ Downloading URL https://mast.stsci.edu/api/v0.1/Download/bundle.sh to ./mastDown
 
 ## Step 2) Run the pipeline on the raw data to apply the latest reference files.
 
+In this repository, we've included a `stpipe-log.cfg` file that will log all of the output from the `jwst` pipeline runs, saving them in a file called `pipeline-run.log`.  If you would prefer there to be a different log for each instrument, either place the different instrument pipeline notebooks in different folders (each with their own `stpipe-log.cfg` file) or rename the filename in the "handler" part of this file before you run each notebook.
+
 ### &mdash; NIRSpec IFU
 
 Included in this repository is an example Jupter notebook for reducing the NIRSpec IFU data from TEMPLATES.  At first glance, this notebook may seem like a lot of steps, but we've set it up so that it 1) works great for TEMPLATES data, and 2) does a better job than the basic reduction would (e.g., better cosmic ray flagging, background subtraction, etc.).
 
-After you've downloaded the data and placed it all where you want it, open up this notebook and start walking through the cells! However, just as a note -- the first time you run this notebook it will download all of the reference files that we mention in the [installation notebook](https://github.com/JWST-Templates/Notebooks/blob/main/0_install_pipeline.ipynb).  This will be GB's of files, so be prepared to wait for a while that first time!
+After you've downloaded the data and placed it all where you want it, open up this notebook and start walking through the cells! 
 
-### (other instruments+observing modes used in TEMPLATES coming soon!)
+>However, just as a note -- the first time you run this notebook it will download all of the reference files that we mention in the [installation notebook](https://github.com/JWST-Templates/Notebooks/blob/main/0_install_pipeline.ipynb).  This will be GB's of files, so be prepared to wait for a while that first time!
+
+### &mdash; (other instruments+observing modes used in TEMPLATES coming soon!)
+
+
+

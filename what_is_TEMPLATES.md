@@ -6,6 +6,8 @@ ERS programs like TEMPLATES need to not just achieve science objectives, but als
 
 Which is why this github repo exists!  Here, we're sharing our methodologies as we develop them.
 
-One of our goals was to get users up to speed as quickly as possible.  There's a lot of documentation out there already, and it can get pretty overwhelming.  So,let's keep it simple: What's the simplest way to download JWST data, reduce it, and start analyzing?  
+One of our goals was to get users up to speed as quickly as possible.  There's a lot of documentation out there already, and it can get pretty overwhelming.  So,let's keep it simple: What's the simplest way to download JWST data, reduce it, and start analyzing?  Think of our notebooks as worked examples that you can adapt.
 
-Please join us.
+Come join us.
+
+

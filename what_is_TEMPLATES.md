@@ -1,4 +1,4 @@
-This is the public github repository made by the JWST team "TEMPLATES: Targeting Extremely Magnified Panchromatic Lensed Arcs and their Extended Star formation".
+This is the public github repository of the JWST team "TEMPLATES: Targeting Extremely Magnified Panchromatic Lensed Arcs and their Extended Star formation".
 
 TEMPLATES is an approved 55-hour JWST observing program to study star formation in four gravitationally lensed galaxies at redshifts of 1 to 4.
 
@@ -8,14 +8,10 @@ The [TEMPLATES website](https://sites.google.com/view/jwst-templates/) explains 
 
 TEMPLATES uses 4 observing modes of JWST:  MIRI imaging, MIRI MRS spectroscopy, NIRCam imaging, and NIRSpec IFU spectroscopy.
 
-ERS programs are supposed 
+ERS programs have multiple additional goals beyond science goals.  Templates has [four science goals and five technical goals](https://sites.google.com/view/jwst-templates/).  Most of our technical goals boil down to establishing best practices for calibrating and reducing the data, and sharing that knowledge via Notebooks.  
 
-Write up some twitterable content about what’s in the Notebook/ (Gourav, Jane)
-GK’s thoughts: 
-Describe the motivation behind releasing the github repository (ERS program, guidepost to reductions, data checks, analysis methodologies, etc.)
-What is the simplest way to download the data, and reduce it?
-Describe the data modes - NIRCam, NIRSpec, MIRI observations very broadly – refer to website!
-Summarise Step 0, 1 and 2 (as mentioned in the README)
-Different types of files?
-Arguments that go into pulling the data- PID and such
+Which is why this github repo exists!  Here, we're sharing our methodologies as we develop them.
 
+One of our goals was to get users up to speed as quickly as possible.  There's a lot of documentation out there already, and it can get pretty overwhelming.  So,let's keep it simple: What's the simplest way to download JWST data, reduce it, and start analyzing?  
+
+Please join us.

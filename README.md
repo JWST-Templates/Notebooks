@@ -6,6 +6,7 @@ We break down getting started with JWST data into simple steps.  We'll use the E
 ## Step 0) You should install the JWST pipeline from STScI.  
 Our simple notebook [0_install_pipeline.ipynb](https://github.com/JWST-Templates/Notebooks/blob/main/0_install_pipeline.ipynb) shows you how.
 
+
 ## Step 1) Get some sweet sweet JWST data.  
 There are several ways to query and download JWST data.  The most obvious is the [MAST web portal](https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html), which has a lot of options, but can be overwhelming and clunky.  There's also an API, but man is the learning curve steep. 
 

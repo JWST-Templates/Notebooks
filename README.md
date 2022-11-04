@@ -1,6 +1,8 @@
 # Notebooks
 Notebooks released by the JWST Early Release Science (ERS) [TEMPLATES](https://sites.google.com/view/jwst-templates/) team, to download, reduce, and analyze JWST data.
 
+First, we explain [what TEMPLATES is, and why you might want our code.](https://github.com/JWST-Templates/Notebooks/blob/main/what_is_TEMPLATES.md)
+
 We break down getting started with JWST data into simple steps.  We'll use the ERS TEMPLATES program as an example, because hey, that's our program (program ID 01355).  Feel free to grab these tools and use them for your own purposes.   
 
 ## Step 0) You should install the JWST pipeline from STScI.  

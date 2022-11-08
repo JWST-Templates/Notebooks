@@ -57,17 +57,9 @@ Downloading URL https://mast.stsci.edu/api/v0.1/Download/bundle.sh to ./mastDown
 
 While you can download calibrated data directly from MAST, what's in the archive often has calibrations that are several weeks stale.  In this period of early science operations (summer/fall 2022), where the calibrations are changing frequently, it is usually best to download the raw data, and reprocess it yourself, so that the latest calibrations are applied.
 
-We provide simple notebooks reprocessing JWST data for each data mode in TEMPLATES.  
+In the coming weeks, we'll provide simple notebooks reprocessing JWST data for each data mode in TEMPLATES.  So, *stay tuned!*
 
 
 
-### &mdash; [NIRSpec IFU](https://github.com/JWST-Templates/Notebooks/blob/main/nirspec_pipeline.ipynb)
-
-This is our example Jupter notebook for reducing the NIRSpec IFU data from TEMPLATES.  At first glance, this notebook may seem like a lot of steps, but we've set it up so that it 1) works great for TEMPLATES data, and 2) does a better job than the basic reduction would (e.g., better cosmic ray flagging, background subtraction, etc.).  Right now it's working for target SGAS1723; we'll update it to work with all 4 TEMPLATES targets.
-
-After you've downloaded the data and placed it all where you want it, open up this notebook and start walking through the cells! 
-
-
-### &mdash; (other instruments+observing modes used in TEMPLATES coming soon!)
 
 

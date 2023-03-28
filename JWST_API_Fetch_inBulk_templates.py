@@ -21,7 +21,7 @@ def fetch_files(PID, INSTRUMENT, KINDOFDATA='UNCAL', token=False, sz_chunk=8):
     print('Querying for program {}'.format(PID))
     print('Querying for science instrument ' + INSTRUMENT)
     matched_obs = Observations.query_criteria(
-        obs_collection = 'JWST', instrument_name = INSTRUMENT, proposal_id = PID)
+        obs_collection = 'JWST', instrument_name = INSTRUMENT+"*", proposal_id = PID)
 
     print('  Found {} matching Observations...'.format(len(matched_obs)))
 

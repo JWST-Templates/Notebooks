@@ -14,14 +14,24 @@ import argparse
 from astroquery.mast import Observations
 from astropy.table import unique, vstack, Table
 
-def fetch_files(PID, INSTRUMENT, KINDOFDATA='UNCAL', token=False, sz_chunk=8):
+def fetch_files(PID, INSTRUMENT, KINDOFDATA='UNCAL', obsmode='all', token=False, sz_chunk=8):
     '''Perform a search for all matching observations in the specified JWST 
     program. Specifying the mission as 'JWST' will optimize the search.
     '''
     print('Querying for program {}'.format(PID))
     print('Querying for science instrument ' + INSTRUMENT)
+
+    # If someone wants to specify e.g. NIRSpec IFU vs. NIRSpec MOS, they can do it as 
+    # 'obsmode', and in that case, only the entries of that type will be downloaded. 
+    # If the user doesn't care, we don't force them to think about this.
+    if obsmode != 'all':
+        print(f'Querying for instrument mode {obsmode}')
+        obsmode = f"/{obsmode}"
+    else:
+        obsmode = "*"
+    # print(f"{INSTRUMENT}{obsmode}")
     matched_obs = Observations.query_criteria(
-        obs_collection = 'JWST', instrument_name = INSTRUMENT, proposal_id = PID)
+        obs_collection = 'JWST', instrument_name = f"{INSTRUMENT}{obsmode}", proposal_id = PID)
 
     print('  Found {} matching Observations...'.format(len(matched_obs)))
 
@@ -76,10 +86,12 @@ if __name__ == '__main__':
                         help='science instrument name')
     parser.add_argument('kindofdata', type=str,
                         help='kind of data (examples: RATE, CAL, UNCAL, I2D)')
+    parser.add_argument('-o', '--obsmode', type=str, default="all",
+                        help='instrument mode (examples: IMAGE, MOS, IFU, SLIT)')
     parser.add_argument('-t', '--token', type=str, default="",
                         help='If data are not public, you should supply a MAST token.')
     parser.add_argument('-c', '--chunk_size', type=int, default=8,
                         choices=range(1,100), 
                         help='Number of Obs to process at a time')
     args = parser.parse_args()
-    fetch_files(args.progID, args.instrument, args.kindofdata, args.token, args.chunk_size)
+    fetch_files(args.progID, args.instrument, args.kindofdata, args.obsmode, args.token, args.chunk_size)

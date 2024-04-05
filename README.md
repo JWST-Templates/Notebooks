@@ -7,7 +7,7 @@ Before we get started, here's [what TEMPLATES is, and why you might want our cod
 
 ### How to cite this repository
 
-If you use the code that we share in this repository, please cite the TEMPLATES overview paper (Rigby et al. 2023, [arxiv:2312.10465](https://arxiv.org/abs/2312.10465)) and link to the version-independent DOI for this repo: [10.5281/zenodo.10737011](https://zenodo.org/doi/10.5281/zenodo.10737012)
+If you use the code that we share in this repository, please cite the TEMPLATES overview paper (Rigby et al. 2023, [arxiv:2312.10465](https://arxiv.org/abs/2312.10465)) and link to the version-independent DOI for this repo: [10.5281/zenodo.10737011](https://zenodo.org/doi/10.5281/zenodo.10737011)
 
 -----------------
 

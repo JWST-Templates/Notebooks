@@ -1,4 +1,7 @@
 # Notebooks
+
+[![DOI](https://zenodo.org/badge/531525794.svg)](https://zenodo.org/doi/10.5281/zenodo.10737011)
+
 Notebooks released by the JWST Early Release Science (ERS) [TEMPLATES](https://sites.google.com/view/jwst-templates/) team, to download, reduce, and analyze JWST data.
 
 Before we get started, here's [what TEMPLATES is, and why you might want our code.](https://github.com/JWST-Templates/Notebooks/blob/main/what_is_TEMPLATES.md)
